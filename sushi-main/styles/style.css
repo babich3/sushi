@@ -1,0 +1,15 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font:sans-serif;
+    background:blanchedalmond
+}
+
+.wrapper{
+    margin:0 75px;
+}
