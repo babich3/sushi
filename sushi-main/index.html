@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yami sushi</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/header.css">
+
 </head>
 <body>
     <header>
         <div class="wrapper">
-        <div class="title">
+        <div class="title comfortaa-300">
             <div class="logo">
-                <img src="" alt="">
+                <img src="Yami sushi.png" alt="">
                 <div class="heading">
                     <h1>Yami sushi</h1>
                 </div>
             </div>
-            <div class="menu">
-                <ul class="nav-bar">
-                    <li class="nav-item"><a href="nav-link"></a></li>
-                    <li class="nav-item"><a href="nav-link"></a></li>
-                    <li class="nav-item"><a href="nav-link"></a></li>
-                    <li class="nav-item"><a href="nav-link"></a></li>
-                </ul>
-            </div>
-            <div class="contacts">
-                <p>Година роботи</p>
-                <p>+380686555329</p>
-                <div class="socials">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </div>
+        </div>
+        <nav class="nav">
+            <a href="#">Головна</a>
+            <a href="#">Меню</a>
+            <a href="#">Доставка</a>
+            <a href="#">Акції</a>
+            <a href="#">Контакти</a>
+          </nav>
+      
+        </div>
+        <div class="contact">
+            <p>Працюємо: 10:00 – 22:00</p>
+            <a href="tel:+380686555329">+38 068 655 53 29</a>
+          </div>
+      
+        </div>
                 <div class="burger">
                     <span></span>
                     <span></span>
@@ -40,31 +45,75 @@
                 </div>
             </div>
         </div>
-        <a href="index.html">
+        <a href="cartpage.html">
             🛒 Кошик: <span class="cart-count">0</span>
         </a>
     
     </header>
-    <h2>Товари</h2>
 
-    <div class="product">
-        <h3>Суші норі</h3>
-        <p>300 грн</p>
-        <button class="CatProdMore" onclick="addToCart(1,'title',25000,'img/image.png')">
-            Buy
-        </button>
+    <div class="hero">
+        <img src="тайтл.jfif" alt="">
+        <p>dfsfsfsdfsdfsdf</p>
+        
     </div>
-    
-    <div class="product">
-        <h3>Філадельфія</h3>
-        <p> 350 грн</p>
-        <button onclick="addToCart(2,'Мишка',800,'img/mouse.png')">
-            Додати в кошик
-        </button>
+
+    <section class="products">
+    <h2 class="title">Наші хіти</h2>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <img src="Сет норі.png" alt="">
+            <h3>Сет норі</h3>
+            <p class="price">300 грн</p>
+            <button class="btn add-to-cart"
+        data-name="Сет норі"
+        data-price="300">
+    Додати в кошик
+</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Сет філадельфія.jpg" alt="">
+            <h3>Сет Філадельфія</h3>
+            <p class="price">350 грн</p>
+            <button class="btn add-to-cart"
+        data-name="Сет Філадельфія"
+        data-price="350">
+    Додати в кошик
+</button>
+        </div>
+
+        <div class="product-card">
+            <img src="_Сімейний час 1,9 кг.jpg" alt="">
+            <h3>Сет Сімейний</h3>
+            <p class="price">550 грн</p>
+            <button class="btn add-to-cart"
+        data-name="Сет Сімейний"
+        data-price="550">
+    Додати в кошик
+</button>
+        </div>
+
+         <div class="product-card">
+            <img src="Преміум.webp" alt="">
+            <h3>Сет Преміум</h3>
+            <p class="price">900 грн</p>
+            <<button class="btn add-to-cart"
+        data-name="Сет Преміум"
+        data-price="900">
+    Додати в кошик
+</button>
+        </div>
     </div>
+</section>
+
+<div class="about">
+    <h2>Про нас</h2>
+
     
    
-    <script src="js/cart-page.js"></script>
+    <script src="js/cartpage.js"></script>
     <script src="js/cart.js"></script>
 </body>
 </html>

@@ -1,35 +1,39 @@
+const buttons = document.querySelectorAll(".add-to-cart");
+const cartCount = document.querySelector(".cart-count");
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// ДОДАТИ ТОВАР
-function addToCart(id, name, price, img) {
-    let item = cart.find(p => p.id === id);
-
-    if (item) {
-        item.qty += 1;
-    } else {
-        cart.push({
-            id,
-            name,
-            price,
-            img,
-            qty: 1
-        });
-    }
-
-    saveCart();
-}
-
-// ЗБЕРЕГТИ
-function saveCart() {
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartCount();
-}
-
-// ЛІЧИЛЬНИК
-function updateCartCount() {
-    let count = cart.reduce((sum, item) => sum + item.qty, 0);
-    let el = document.querySelector(".cart-count");
-    if (el) el.textContent = count;
-}
-
 updateCartCount();
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        const name = button.dataset.name;
+        const price = Number(button.dataset.price);
+
+        const item = cart.find(p => p.name === name);
+
+        if (item) {
+            item.qty++;
+        } else {
+            cart.push({
+                name: name,
+                price: price,
+                qty: 1
+            });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+    });
+});
+
+function updateCartCount() {
+    let total = 0;
+
+    cart.forEach(item => {
+        total += item.qty;
+    });
+
+    cartCount.textContent = total;
+}

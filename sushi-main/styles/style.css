@@ -1,15 +1,110 @@
 *{
-    padding:0;
     margin:0;
-    box-sizing: border-box;
-
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Comfortaa", sans-serif !important; 
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 body{
-    font:sans-serif;
-    background:blanchedalmond
+    background:#0c0c0c;
+    color:#fff;
+}
+.comfortaa-300 {
+    font-family: "Comfortaa", sans-serif !important; 
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+/* заголовок */
+
+.title{
+    text-align:center;
+    font-size:32px;
+    margin:40px 0;
 }
 
-.wrapper{
-    margin:0 75px;
+/* секція товарів */
+
+.products{
+    padding:20px 60px 60px;
 }
+
+/* сітка карточок */
+
+.products-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap:30px;
+}
+
+/* карточка */
+
+.product-card{
+    background:linear-gradient(180deg,#151515,#0b0b0b);
+    border-radius:18px;
+    padding:18px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(255,140,0,0.15);
+}
+
+.product-card img{
+    width:100%;
+    max-height:180px;
+    object-fit:contain;
+    margin-bottom:12px;
+}
+
+/* назва */
+
+.product-card h3{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+/* ціна */
+
+.price{
+    color:#ffb347;
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+/* кнопка */
+
+.btn{
+    background:linear-gradient(135deg,#ff9900,#ff5e00);
+    border:none;
+    color:white;
+    padding:10px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.25s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 12px rgba(255,153,0,0.6);
+}
+
+
+.hero img{
+    width: 800px;
+    height:300px;
+}
+
+.hero p{
+    padding: PX;
+}
+
+    
